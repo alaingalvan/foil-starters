@@ -1,0 +1,22 @@
+{
+  "short_name": "Neon Blog",
+  "name": "Foil Neon Starter Blog",
+  "description": "A starter application for Foil that showcases its ease of use in building custom blogs and portfolios. Modeled after https://alain.xyz.",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "/assets/favicon/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+  },
+  {
+      "src": "/assets/favicon/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+  }
+  ],
+  "background_color": "#151b1f",
+  "theme_color": "#151b1f",
+  "display": "standalone",
+  "orientation": "portrait"
+}

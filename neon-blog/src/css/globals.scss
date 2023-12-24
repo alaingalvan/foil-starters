@@ -1,0 +1,666 @@
+$back0: #15191f; /* dark cobalt */
+
+/**
+* Base Styles
+*/
+:root {
+    color-scheme: dark;
+}
+
+html {
+    scroll-behavior: smooth;
+    scrollbar-color: rgba(0, 0, 0, 0.75) rgba(0, 0, 0, 0.1);
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: calc(16.5px);
+    font-weight: 300;
+    color: #fff;
+    z-index: -2;
+    scroll-margin-top: 1.5em;
+}
+
+body {
+    background-color: $back0;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    overflow-y: -moz-scrollbars-none, scroll;
+}
+
+input {
+    border: 0 none;
+    background: rgba(0, 0, 0, 0);
+    color: #fff;
+    &:focus {
+        outline: none;
+    }
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    outline: 0;
+    &:link,
+    &:visited {
+        color: #fff;
+    }
+    &:hover {
+        color: #abcde8;
+    }
+    &:active {
+        color: #4c8abd;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-style: normal;
+    font-size: 3em;
+    font-weight: 200;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.6666em;
+}
+
+h4 {
+    font-size: 1.5em;
+}
+
+h5 {
+    font-size: 1.12em;
+}
+
+h6 {
+    font-size: 1.05em;
+}
+
+img {
+    max-width: 100%;
+}
+
+table {
+    display: table;
+}
+
+table,
+span {
+    max-width: 100%;
+}
+
+em {
+    font-style: italic;
+    font-weight: 200;
+}
+
+strong {
+    font-weight: 500;
+}
+
+p {
+    line-height: 1.75em;
+    a {
+        &:link,
+        &:visited {
+            color: #639dcc;
+        }
+        &:hover {
+            color: #abcde8;
+        }
+        &:active {
+            color: #4c8abd;
+        }
+    }
+}
+
+pre {
+    text-shadow: 0 0px 0px rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.23);
+    padding: 0.5em;
+    overflow: auto;
+    border-radius: 0.5em;
+    margin: 1em 0;
+    border: 2px solid #ffffff08;
+}
+
+code {
+    font-family: 'Source Code Pro';
+    line-height: 1.5em;
+    font-weight: 400;
+    font-variant-ligatures: contextual;
+}
+
+select {
+    background-color: #0d0f11;
+    border: 0;
+    color: #fff;
+    padding: 0.4em;
+    border-radius: 0.25em;
+    border: none;
+    outline: none;
+    &::-ms-expand {
+        display: none;
+    }
+}
+
+::selection {
+    background-color: #147ea1;
+}
+
+::-webkit-scrollbar {
+    width: initial;
+}
+
+::-webkit-scrollbar-corner {
+    background: rgba(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+body::-webkit-scrollbar-track {
+    background: #101318;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.75);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.85);
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: rgba(0, 0, 0, 0.85);
+}
+
+/* Buttons */
+::-webkit-scrollbar-button {
+    border-style: solid;
+    height: 1em;
+    width: 1em;
+}
+
+/* Up */
+::-webkit-scrollbar-button:vertical:decrement {
+    border-width: 0 0.5em 0.75em 0.5em;
+    border-color: transparent transparent #0004 transparent;
+}
+
+::-webkit-scrollbar-button:vertical:decrement:hover {
+    border-color: transparent transparent #000a transparent;
+}
+
+/* Down */
+::-webkit-scrollbar-button:vertical:increment {
+    border-width: 0.75em 0.5em 0 0.5em;
+    border-color: #0004 transparent transparent transparent;
+}
+
+::-webkit-scrollbar-button:vertical:increment:hover {
+    border-color: #000a transparent transparent transparent;
+}
+
+/* Left */
+::-webkit-scrollbar-button:horizontal:decrement {
+    border-width: 0.5em 0.75em 0.5em 0;
+    border-color: transparent #0004 transparent transparent;
+}
+
+::-webkit-scrollbar-button:horizontal:decrement:hover {
+    border-color: transparent #000a transparent transparent;
+}
+
+/* Right */
+::-webkit-scrollbar-button:horizontal:increment {
+    border-width: 0.5em 0 0.5em 0.75em;
+    border-color: transparent transparent transparent #0004;
+}
+
+::-webkit-scrollbar-button:horizontal:increment:hover {
+    border-color: transparent transparent transparent #000a;
+}
+
+ul,
+pre,
+table {
+    scrollbar-color: rgba(0, 0, 0, 0.175) rgba(0, 0, 0, 0.04);
+
+    &::-webkit-scrollbar {
+        width: initial;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: rgba(0, 0, 0, 0.175);
+    }
+
+    &::-webkit-scrollbar-track {
+        background: rgba(0, 0, 0, 0.04);
+    }
+    &::-webkit-scrollbar-thumb:hover {
+        background: rgba(0, 0, 0, 0.25);
+    }
+
+    &::-webkit-scrollbar-thumb:active {
+        background: rgba(0, 0, 0, 0.25);
+    }
+}
+/* Article Specific CSS */
+
+article {
+    .language-hlsl::before {
+        content: ' HLSL';
+        display: block;
+        font-size: 0.75rem;
+        opacity: 0.5;
+    }
+    .language-glsl::before {
+        content: ' GLSL';
+        display: block;
+        font-size: 0.75rem;
+        opacity: 0.5;
+    }
+    .language-wgsl::before {
+        content: ' WGSL';
+        display: block;
+        font-size: 0.75rem;
+        opacity: 0.5;
+    }
+    .language-msl::before {
+        content: ' MSL';
+        display: block;
+        font-size: 0.75rem;
+        opacity: 0.5;
+    }
+    .language-asm::before {
+        content: ' ASM';
+        display: block;
+        font-size: 0.75rem;
+        opacity: 0.5;
+    }
+    .language-c::before {
+        content: ' C';
+        display: block;
+        font-size: 0.75rem;
+        opacity: 0.5;
+    }
+    .language-cpp::before {
+        content: ' C++';
+        display: block;
+        font-size: 0.75rem;
+        opacity: 0.5;
+    }
+    .language-py::before {
+        content: ' Python';
+        display: block;
+        font-size: 0.75rem;
+        opacity: 0.5;
+    }
+    .language-cs::before {
+        content: ' C#';
+        display: block;
+        font-size: 0.75rem;
+        opacity: 0.5;
+    }
+    .language-m::before {
+        content: ' Objective C';
+        display: block;
+        font-size: 0.75rem;
+        opacity: 0.5;
+    }
+    .language-mm::before {
+        content: ' Objective C++';
+        display: block;
+        font-size: 0.75rem;
+        opacity: 0.5;
+    }
+    .language-bash::before {
+        content: ' Bash';
+        display: block;
+        font-size: 0.75rem;
+        opacity: 0.5;
+    }
+    .language-rust::before {
+        content: ' Rust';
+        display: block;
+        font-size: 0.75rem;
+        opacity: 0.5;
+    }
+    .language-js::before {
+        content: ' JavaScript';
+        display: block;
+        font-size: 0.75rem;
+        opacity: 0.5;
+    }
+    .language-ts::before {
+        content: ' TypeScript';
+        display: block;
+        font-size: 0.75rem;
+        opacity: 0.5;
+    }
+    .language-bash::before {
+        content: ' Bash';
+        display: block;
+        font-size: 0.75rem;
+        opacity: 0.5;
+    }
+    .language-yml::before {
+        content: ' YML';
+        display: block;
+        font-size: 0.75rem;
+        opacity: 0.5;
+    }
+    .language-yaml::before {
+        content: ' Yaml';
+        display: block;
+        font-size: 0.75rem;
+        opacity: 0.5;
+    }
+    .language-groovy::before {
+        content: ' Grovy';
+        display: block;
+        font-size: 0.75rem;
+        opacity: 0.5;
+    }
+    .language-cmake::before {
+        content: ' CMake';
+        display: block;
+        font-size: 0.75rem;
+        opacity: 0.5;
+    }
+    .language-txt::before {
+        content: ' Text';
+        display: block;
+        font-size: 0.75rem;
+        opacity: 0.5;
+    }
+    p {
+        line-height: 1.75em;
+    }
+    img {
+        display: block;
+        margin: auto;
+        position: relative;
+        &[title]::after {
+            content: attr(title);
+            text-align: center;
+            display: inline-block;
+            font-weight: 300;
+            font-style: italic;
+        }
+    }
+    blockquote {
+        border-left-width: 0.5em;
+        background-color: rgba(37, 83, 117, 0.151);
+        border-top-right-radius: 1em;
+        border-bottom-right-radius: 1em;
+        padding: 1em 2em;
+        margin: 0 0 1.1em;
+        border-left: 0.5em solid rgba(54, 140, 202, 0.52);
+    }
+    strong {
+        font-weight: 500;
+    }
+    & > p {
+        padding: 1em 0;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    ul,
+    ol {
+        padding: 1em 0;
+    }
+    a {
+        &[href^='#'] {
+            font-weight: 400;
+            white-space: nowrap;
+        }
+        &:hover {
+            text-decoration: underline;
+        }
+        &[title]::after {
+            content: '“' attr(title) '”';
+            text-align: center;
+            display: inline-block;
+            font-weight: 300;
+            width: 100%;
+            font-style: italic;
+            line-height: 2em;
+        }
+    }
+    ul {
+        list-style: disc;
+        padding-left: 2em;
+    }
+    ol {
+        list-style: decimal;
+        padding-left: 2em;
+        > ol {
+            list-style: lower-alpha;
+            > ol {
+                list-style: lower-roman;
+            }
+        }
+    }
+    ul,
+    ol {
+        line-height: 1.5em;
+    }
+    & > table {
+        display: block;
+        line-height: 2em;
+        overflow-x: auto;
+        max-width: 80vw;
+        th {
+            padding: 0.5em 0.7em;
+            font-weight: 500;
+        }
+        tr {
+            &:nth-child(2n) {
+                background-color: rgba(0, 0, 0, 0.3);
+            }
+            td {
+                padding: 0.4em 0.7em;
+            }
+        }
+    }
+    pre {
+        max-height: 75vh;
+        code {
+            width: 100%;
+        }
+        table {
+            width: 100%;
+            tr {
+                &:hover {
+                    background-color: #147ea111;
+                }
+            }
+        }
+    }
+
+    h1,
+    h2,
+    h3,
+    td {
+        border-left: 0em solid rgb(78, 160, 232);
+        transition: border-left 0.3s ease 0s;
+        &:target {
+            border-left: 0.5em solid rgb(78, 160, 232);
+            padding-left: 0.5em;
+            scroll-margin-top: 0.5em;
+        }
+    }
+
+    li {
+        a {
+            &:link,
+            &:visited {
+                color: #639dcc;
+            }
+            &:hover {
+                color: #abcde8;
+            }
+            &:active {
+                color: #4c8abd;
+            }
+        }
+    }
+
+    hr {
+        border: none;
+        text-align: center;
+        font-size: 1.2em;
+        &::before {
+            content: '...';
+            letter-spacing: 0.5em;
+            line-height: 2em;
+        }
+    }
+    p > code,
+    p > em > code,
+    p > strong > code {
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: 0.5em;
+        padding: 0.2em 0.4em;
+        border: 2px solid #ffffff08;
+        color: #d3d3d3;
+    }
+
+    .profile-picture {
+        display: inline;
+        margin: 0;
+        border-radius: 100%;
+        width: 1.625em;
+        vertical-align: middle;
+        padding: 0.125em;
+    }
+    .markademic-profile {
+        display: inline;
+        margin: 0;
+        border-radius: 100%;
+        width: 1.5em;
+        vertical-align: middle;
+    }
+}
+
+.katex-display {
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 2em 0;
+}
+
+.markademic-citename {
+    font-weight: 400;
+}
+
+.markademic-citations {
+    max-height: 50vh;
+    font-size: 0.75rem;
+    display: block;
+    border-radius: .5em;
+    opacity: .875;
+    background: #00000018;
+
+    &::before {
+        content: '∴ References';
+        font-size: 1.33333em;
+        font-weight: 300;
+        line-height: 2.5em;
+        padding: .5em;
+    }
+
+    a {
+        &:link,
+        &:visited {
+            color: #639dcc;
+        }
+        &:hover {
+            color: #abcde8;
+        }
+        &:active {
+            color: #4c8abd;
+        }
+    }
+
+    tbody {
+        width: 100%;
+        display: block;
+    }
+    tr {
+        width: 100%;
+        display: block;
+        background-color: rgba(0, 0, 0, 0.05);
+        &:nth-child(2n) {
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+    }
+    margin: 0;
+    width: 100%;
+}
+
+.markademic-symbols {
+    &::before {
+        content: '∑ Symbols';
+        font-size: 2em;
+        font-weight: 100;
+        line-height: 2em;
+    }
+}
+
+/* Buttons */
+
+.btn {
+    display: inline-block;
+    box-shadow: 0 10em 0 rgba(255, 255, 255, 0) inset;
+    text-decoration: none;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s ease-out, background-color 0.3s ease-out;
+    cursor: pointer;
+    border-radius: 2em;
+    border-width: 0.1em;
+    border-style: solid;
+    margin: 0.5em 0.25em;
+    padding: 0.75em 1.5em;
+
+    &:not(:hover) {
+        background-color: transparent !important;
+    }
+    &:active {
+        box-shadow: 0 10em 0 rgba(0, 0, 0, 0.4) inset;
+    }
+}
+
+a.btn {
+    text-decoration: none;
+    color: #eee;
+    &:hover {
+        color: #fff;
+    }
+
+    &:active {
+        color: #ddd;
+    }
+}

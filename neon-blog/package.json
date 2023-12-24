@@ -1,0 +1,47 @@
+{
+  "name": "foil-starter-neon",
+  "version": "1.0.0",
+  "author": {
+    "name": "Alain Galvan",
+    "email": "hi@alain.xyz",
+    "url": "https://alain.xyz"
+  },
+  "description": "Foil's default starter project.",
+  "keywords": [
+    "foil",
+    "starter",
+    "neon",
+    "bootstrap"
+  ],
+  "private": true,
+  "type": "module",
+  "main": "src/main.tsx",
+  "dependencies": {
+    "@mdx-js/react": "^3.0.0",
+    "express": "^4.18.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.20.1",
+    "ts-node": "^10.9.2"
+  },
+  "devDependencies": {
+    "@types/react-router-dom": "^5.3.3"
+  },
+  "foil": {
+    "title": "Foil Starter Neon",
+    "permalink": "/",
+    "frontend": true,
+    "html": "src/html.tsx",
+    "outputPath": "assets/build",
+    "assets": [
+      "assets/*"
+    ],
+    "publicModules": [
+      "react",
+      "react/jsx-runtime",
+      "react-dom",
+      "react-router-dom",
+      "@mdx-js/react"
+    ]
+  }
+}
